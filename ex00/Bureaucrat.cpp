@@ -6,7 +6,7 @@
 /*   By: aobshatk <aobshatk@42warsaw.pl>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/05 20:54:00 by aobshatk          #+#    #+#             */
-/*   Updated: 2025/10/13 18:31:22 by aobshatk         ###   ########.fr       */
+/*   Updated: 2025/10/13 18:50:04 by aobshatk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,4 +88,12 @@ void Bureaucrat::degrade(const int g)
 		throw GradeTooLowException();
 	else
 		this->grade += g;
+}
+
+std::ostream &operator<<(std::ostream &o, Bureaucrat &b)
+{
+	o << b.getName();
+	o << ", bureaucrat grade ";
+	o<< b.getGrade();
+	return o;
 }

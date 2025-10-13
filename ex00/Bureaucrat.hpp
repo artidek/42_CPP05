@@ -6,7 +6,7 @@
 /*   By: aobshatk <aobshatk@42warsaw.pl>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/05 20:54:06 by aobshatk          #+#    #+#             */
-/*   Updated: 2025/10/13 18:31:25 by aobshatk         ###   ########.fr       */
+/*   Updated: 2025/10/13 18:51:20 by aobshatk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 #include <string>
 #include <exception>
+#include <ostream>
 
 class Bureaucrat
 {
@@ -49,4 +50,6 @@ class Bureaucrat
 		void promote(const int g);
 		void degrade(const int g);
 };
+std::ostream &operator<<(std::ostream &o, Bureaucrat &b);
+
 #endif
