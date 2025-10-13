@@ -22,6 +22,7 @@ int main(void)
 	try
 	{
 		Bureaucrat c(10);
+		c.degrade(200);
 	}
 	catch(const std::exception& e)
 	{
