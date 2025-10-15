@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Bureaucrat.cpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aobshatk <aobshatk@42warsaw.pl>            +#+  +:+       +#+        */
+/*   By: aobshatk <aobshatk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/05 20:54:00 by aobshatk          #+#    #+#             */
-/*   Updated: 2025/10/13 18:50:04 by aobshatk         ###   ########.fr       */
+/*   Updated: 2025/10/15 13:14:44 by aobshatk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,9 +39,8 @@ Bureaucrat::Bureaucrat(const int g)
 	setGrade(g);
 }
 
-Bureaucrat::Bureaucrat(const Bureaucrat &copy)
+Bureaucrat::Bureaucrat(const Bureaucrat &copy) : grade(copy.getGrade())
 {
-		*this = copy;
 }
 
 Bureaucrat::~Bureaucrat()

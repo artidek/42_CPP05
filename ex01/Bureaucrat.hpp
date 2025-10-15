@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Bureaucrat.hpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aobshatk <aobshatk@42warsaw.pl>            +#+  +:+       +#+        */
+/*   By: aobshatk <aobshatk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/05 20:54:06 by aobshatk          #+#    #+#             */
-/*   Updated: 2025/10/13 18:09:36 by aobshatk         ###   ########.fr       */
+/*   Updated: 2025/10/15 15:50:21 by aobshatk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,9 @@
 
 #include <string>
 #include <exception>
+#include <ostream>
+
+class Form;
 
 class Bureaucrat
 {
@@ -43,10 +46,14 @@ class Bureaucrat
 		Bureaucrat(const int g);
 		Bureaucrat (const Bureaucrat &copy);
 		~Bureaucrat ();
+		Bureaucrat & operator=(Bureaucrat const &copy);
 		std::string getName() const;
 		int getGrade() const;
 		void setGrade(const int g);
 		void promote(const int g);
 		void degrade(const int g);
+		void signForm(Form &f);
 };
+std::ostream &operator<<(std::ostream &o, Bureaucrat &b);
+
 #endif
