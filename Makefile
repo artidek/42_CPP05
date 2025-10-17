@@ -6,7 +6,7 @@
 #    By: aobshatk <aobshatk@42warsaw.pl>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/13 14:30:33 by aobshatk          #+#    #+#              #
-#    Updated: 2025/10/16 18:10:57 by aobshatk         ###   ########.fr        #
+#    Updated: 2025/10/17 12:47:03 by aobshatk         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,10 +26,11 @@ $(EX01):
 	$(CPP) $(CPP_FLAGS )ex01/Bureaucrat.cpp ex01/Form.cpp ex01/main.cpp -o $(EX01)
 
 $(EX02):
-	$(CPP) $(CPP_FLAGS )ex02/Bureaucrat.cpp ex02/AForm.cpp ex02/ShrubberyCreationForm.cpp ex02/main.cpp -o $(EX02)
+	$(CPP) $(CPP_FLAGS )ex02/Bureaucrat.cpp ex02/AForm.cpp ex02/ShrubberyCreationForm.cpp ex02/RobotomyRequestForm.cpp ex02/PresidentialPardonForm.cpp ex02/main.cpp -o $(EX02)
 
 fclean:
 	rm -f bureaucrat*
+	rm -f *_shrubbery
 re: fclean all
 .PHONY: all fclean re
 
